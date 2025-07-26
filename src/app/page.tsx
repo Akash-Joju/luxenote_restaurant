@@ -52,19 +52,19 @@ export default function HomePage() {
           className="mt-10 flex flex-wrap gap-6 justify-center"
         >
           <a href="#book-table">
-            <Button className="animate-pulseSlow bg-blue-600 hover:bg-black-300 text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+            <Button className="animate-pulseSlow bg-blue-900 hover:bg-black-300 text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
               Book a Table
             </Button>
           </a>
 
           <Link href="/rooms">
-            <Button className="animate-pulseSlow bg-blue-600 hover:bg-black-300 text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+            <Button className="animate-pulseSlow bg-blue-900 hover:bg-black-300 text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
               Explore the Rooms
             </Button>
           </Link>
 
           <a href="#about">
-            <Button className="animate-pulseSlow bg-blue-600 hover:bg-black text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+            <Button className="animate-pulseSlow bg-blue-900 hover:bg-black text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
               About Us
             </Button>
           </a>
