@@ -92,9 +92,9 @@ export default function BookingForm() {
             id="time"
             name="time"
             value={form.time}
-            onChange={(value: string) =>
+            onChange={(value: string) => {
               setForm((prev) => ({ ...prev, time: value }))
-            }
+            }}
             required
           />
         </div>
