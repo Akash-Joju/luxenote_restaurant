@@ -26,34 +26,22 @@ export default function HomePage() {
         </div>
 
         <motion.h1
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="text-5xl md:text-6xl font-bold text-white drop-shadow-xl"
-        >
-          <motion.h1
   initial={{ opacity: 0, y: -30 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.7 }}
   className="text-5xl md:text-6xl font-bold text-white drop-shadow-xl text-center"
 >
   Welcome to <span className="text-[#464dd3] drop-shadow-[0_0_5px_white]">LuxeBite</span>
-  <p className="text-lg md:text-xl font-medium text-white mt-2">
-    A fusion of fine dining & luxurious stays
-  </p>
 </motion.h1>
 
-
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.3 }}
-          className="mt-4 text-lg md:text-xl text-white max-w-xl"
-        >
-          Reserve a table or a luxury room with elegance. Experience premium dining and stay.
-        </motion.p>
+<motion.p
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.9, delay: 0.3 }}
+  className="text-lg md:text-xl font-medium text-white mt-2 text-center"
+>
+  A fusion of fine dining & luxurious stays
+</motion.p>
 
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -62,7 +50,7 @@ export default function HomePage() {
           className="mt-10 flex flex-wrap gap-6 justify-center"
         >
           <a href="#book-table">
-            <Button className="animate-pulseSlow bg-gray-600 hover:bg-blue-400 text-black font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+            <Button className="animate-pulseSlow bg-gray-600 hover:bg-blue-300 text-black font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
               Book a Table
             </Button>
           </a>
@@ -70,14 +58,14 @@ export default function HomePage() {
           <Link href="/rooms">
             <Button
               variant="secondary"
-              className="animate-pulseSlow bg-gray-600 hover:bg-blue-400 text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition-all duration-30"
+              className="animate-pulseSlow bg-gray-600 hover:bg-blue-300 text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition-all duration-30"
             >
               Explore the Rooms
             </Button>
           </Link>
 
           <a href="#about">
-            <Button className="animate-pulseSlow bg-gray-600 text-white-700 hover:bg-blue-400 font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+            <Button className="animate-pulseSlow bg-gray-600 text-white-700 hover:bg-blue-300 font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
               About Us
             </Button>
           </a>
