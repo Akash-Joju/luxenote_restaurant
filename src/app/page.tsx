@@ -320,13 +320,14 @@ export default function HomePage() {
           About LuxeBite
         </motion.h3>
         <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.9 }}
-          className="text-md text-gray-700 max-w-3xl mx-auto"
-        >
-          LuxeBite is a premium destination blending fine dining with luxurious accommodation. Our commitment to excellence ensures every guest receives a world-class experience — whether you're enjoying a romantic dinner or an extended stay. Founded on elegance and comfort, LuxeBite redefines modern hospitality.
-        </motion.p>
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ duration: 0.9 }}
+  className="text-md text-gray-700 max-w-3xl mx-auto"
+>
+  LuxeBite is a premium destination blending fine dining with luxurious accommodation. Our commitment to excellence ensures every guest receives a world-class experience — whether you're enjoying a romantic dinner or an extended stay. Founded on elegance and comfort, LuxeBite redefines modern hospitality.
+</motion.p>
+
       </motion.section>
     </main>
   );
