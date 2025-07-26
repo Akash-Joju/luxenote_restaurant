@@ -65,7 +65,7 @@ export default function HomePage() {
           </Link>
 
           <a href="#about">
-            <Button className="animate-pulseSlow bg-gray-600 text-white-700 hover:bg-blue-300 font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+            <Button className="animate-pulseSlow bg-gray-600 text-white-700 hover: bg-black font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
               About Us
             </Button>
           </a>
