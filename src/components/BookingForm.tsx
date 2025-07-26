@@ -88,15 +88,17 @@ export default function BookingForm() {
           <Label htmlFor="time" className="text-gray-700 flex items-center gap-2">
             <Clock size={18} /> Time
           </Label>
-          <TimePicker
-            id="time"
-            name="time"
-            value={form.time}
-            onChange={(value: string) => {
-              setForm((prev) => ({ ...prev, time: value }))
-            }}
-            required
-          />
+         <TimePicker
+  id="time"
+  name="time"
+  value={form.time}
+  onChange={(e) => {
+    const value = (e.target as HTMLInputElement).value
+    setForm((prev) => ({ ...prev, time: value }))
+  }}
+  required
+/>
+
         </div>
 
         {/* Guests */}
