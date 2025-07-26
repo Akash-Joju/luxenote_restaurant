@@ -3,10 +3,13 @@
 import { motion } from 'framer-motion'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules'
+
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
+
+import Image from 'next/image'
 
 export default function DishesPage() {
   const dishes = [
@@ -47,9 +50,9 @@ export default function DishesPage() {
       <Swiper
         modules={[EffectCoverflow, Navigation, Pagination]}
         effect="coverflow"
-        grabCursor
-        centeredSlides
-        loop
+        grabCursor={true}
+        centeredSlides={true}
+        loop={true}
         slidesPerView="auto"
         coverflowEffect={{
           rotate: 30,
@@ -59,7 +62,7 @@ export default function DishesPage() {
           slideShadows: true,
         }}
         pagination={{ clickable: true }}
-        navigation
+        navigation={true}
         className="w-full max-w-[95%]"
       >
         {dishes.map((dish, index) => (
@@ -68,11 +71,15 @@ export default function DishesPage() {
             className="rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 bg-white"
             style={{ width: "300px" }}
           >
-            <img
-              src={dish.img}
-              alt={dish.name}
-              className="w-full h-[300px] object-cover rounded-t-3xl"
-            />
+            <div className="relative w-full h-[300px]">
+              <Image
+                src={dish.img}
+                alt={dish.name || `Dish ${index + 1}`}
+                fill
+                className="object-cover rounded-t-3xl"
+                sizes="(max-width: 768px) 100vw, 300px"
+              />
+            </div>
             <div className="p-4 text-center">
               <h3 className="text-lg font-semibold text-gray-800">{dish.name}</h3>
             </div>

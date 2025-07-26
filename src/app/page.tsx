@@ -4,12 +4,11 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {  EffectCoverflow,Navigation, Pagination } from "swiper/modules";
+import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
-
 
 export default function HomePage() {
   return (
@@ -26,22 +25,25 @@ export default function HomePage() {
         </div>
 
         <motion.h1
-  initial={{ opacity: 0, y: -30 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.7 }}
-  className="text-5xl md:text-6xl font-bold text-white drop-shadow-xl text-center"
->
-  Welcome to <span className="text-[#464dd3] drop-shadow-[0_0_5px_white]">LuxeBite</span>
-</motion.h1>
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="text-5xl md:text-6xl font-bold text-white drop-shadow-xl text-center"
+        >
+          Welcome to{" "}
+          <span className="text-[#464dd3] drop-shadow-[0_0_5px_white]">
+            LuxeBite
+          </span>
+        </motion.h1>
 
-<motion.p
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.9, delay: 0.3 }}
-  className="text-lg md:text-xl font-medium text-white mt-2 text-center"
->
-  A fusion of fine dining & luxurious stays
-</motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 0.3 }}
+          className="text-lg md:text-xl font-medium text-white mt-2 text-center"
+        >
+          A fusion of fine dining & luxurious stays
+        </motion.p>
 
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -56,92 +58,90 @@ export default function HomePage() {
           </a>
 
           <Link href="/rooms">
-            <Button
-              variant="secondary"
-              className="animate-pulseSlow bg-gray-600 hover:bg-blue-300 text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition-all duration-30"
-            >
+            <Button className="animate-pulseSlow bg-gray-600 hover:bg-blue-300 text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
               Explore the Rooms
             </Button>
           </Link>
 
           <a href="#about">
-            <Button className="animate-pulseSlow bg-gray-600 text-white-700 hover: bg-black font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+            <Button className="animate-pulseSlow bg-gray-600 hover:bg-black text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
               About Us
             </Button>
           </a>
         </motion.div>
       </section>
+
       {/* ✅ DISHES SECTION */}
-<motion.section
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
-  viewport={{ once: true }}
-  className="w-full max-w-7xl mx-auto py-20 px-4 scroll-mt-24"
->
-  <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
-    LuxeBite <span className="text-[#464dd3]">Signature Dishes</span>
-  </h2>
+      <motion.section
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="w-full max-w-7xl mx-auto py-20 px-4 scroll-mt-24"
+      >
+        <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
+          LuxeBite <span className="text-[#464dd3]">Signature Dishes</span>
+        </h2>
 
-  <Swiper
-    modules={[EffectCoverflow, Navigation, Pagination]}
-    effect="coverflow"
-    grabCursor={true}
-    centeredSlides={true}
-    loop={true}
-    slidesPerView="auto"
-    coverflowEffect={{
-      rotate: 30,
-      stretch: 0,
-      depth: 150,
-      modifier: 1.5,
-      slideShadows: true,
-    }}
-    pagination={{ clickable: true }}
-    navigation
-    className="w-full max-w-[95%]"
-  >
-    {[
-  {
-    name: "Truffle Pasta",
-    img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c",
-  },
-  {
-    name: "Gourmet Burger",
-    img: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1",
-  },
-  {
-    name: "Garden Salad",
-    img: "https://i.pinimg.com/1200x/6a/8c/99/6a8c991c75b3045a4808467c7143da57.jpg",
-  },
-  {
-    name: "Classic Steak",
-    img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836",
-  },
-  {
-    name: "Seafood Delight",
-    img: "https://i.pinimg.com/1200x/c8/95/98/c89598566c94bf5912d217de6efb40be.jpg",
-  },
-].map((dish, index) => (
-  <SwiperSlide
-    key={index}
-    className="rounded-3xl overflow-hidden shadow-2xl transition-all duration-500"
-    style={{ width: "300px" }}
-  >
-    <img
-      src={dish.img}
-      alt={dish.name}
-      className="w-full h-[300px] object-cover rounded-t-3xl"
-    />
-    <div className="p-4 bg-white text-center">
-      <h3 className="text-lg font-semibold text-gray-800">{dish.name}</h3>
-    </div>
-  </SwiperSlide>
-))}
-
-  </Swiper>
-</motion.section>
-
+        <Swiper
+          modules={[EffectCoverflow, Navigation, Pagination]}
+          effect="coverflow"
+          grabCursor
+          centeredSlides
+          loop
+          slidesPerView="auto"
+          coverflowEffect={{
+            rotate: 30,
+            stretch: 0,
+            depth: 150,
+            modifier: 1.5,
+            slideShadows: true,
+          }}
+          pagination={{ clickable: true }}
+          navigation
+          className="w-full max-w-[95%]"
+        >
+          {[
+            {
+              name: "Truffle Pasta",
+              img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c",
+            },
+            {
+              name: "Gourmet Burger",
+              img: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1",
+            },
+            {
+              name: "Garden Salad",
+              img: "https://i.pinimg.com/1200x/6a/8c/99/6a8c991c75b3045a4808467c7143da57.jpg",
+            },
+            {
+              name: "Classic Steak",
+              img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836",
+            },
+            {
+              name: "Seafood Delight",
+              img: "https://i.pinimg.com/1200x/c8/95/98/c89598566c94bf5912d217de6efb40be.jpg",
+            },
+          ].map((dish, index) => (
+            <SwiperSlide
+              key={index}
+              className="rounded-3xl overflow-hidden shadow-2xl transition-all duration-500"
+              style={{ width: "300px" }}
+            >
+              <img
+                src={dish.img}
+                alt={dish.name}
+                className="w-full h-[300px] object-cover rounded-t-3xl"
+              />
+              <div className="p-4 bg-white text-center">
+                <h3 className="text-lg font-semibold text-gray-800">
+                  {dish.name}
+                </h3>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </motion.section>
 
       {/* ✅ BOOKING SECTION */}
       <motion.section
@@ -171,7 +171,9 @@ export default function HomePage() {
           transition={{ duration: 0.9, delay: 0.2 }}
           className="w-full md:w-1/2 text-center md:text-left"
         >
-          <h3 className="text-3xl font-bold text-gray-900 mb-3">Book a Table</h3>
+          <h3 className="text-3xl font-bold text-gray-900 mb-3">
+            Book a Table
+          </h3>
           <p className="text-md text-gray-700 mb-6">
             Reserve your seat today and enjoy a premium dining experience like no other.
           </p>
@@ -215,7 +217,9 @@ export default function HomePage() {
           transition={{ duration: 0.9, delay: 0.2 }}
           className="w-full md:w-1/2 text-center md:text-left"
         >
-          <h3 className="text-3xl font-bold text-gray-900 mb-3">Our Luxury Rooms</h3>
+          <h3 className="text-3xl font-bold text-gray-900 mb-3">
+            Our Luxury Rooms
+          </h3>
           <p className="text-md text-gray-700 mb-6">
             Discover elegant rooms tailored for your comfort, perfect for any occasion.
           </p>
@@ -246,7 +250,9 @@ export default function HomePage() {
           transition={{ duration: 0.9 }}
           className="text-center"
         >
-          <h3 className="text-3xl font-bold text-gray-900 mb-3">Our Premium Facilities</h3>
+          <h3 className="text-3xl font-bold text-gray-900 mb-3">
+            Our Premium Facilities
+          </h3>
           <p className="text-md text-gray-700 max-w-2xl mx-auto">
             Designed to enhance your stay with luxury and comfort. Explore the exceptional amenities we offer.
           </p>
@@ -320,14 +326,13 @@ export default function HomePage() {
           About LuxeBite
         </motion.h3>
         <motion.p
-  initial={{ opacity: 0 }}
-  whileInView={{ opacity: 1 }}
-  transition={{ duration: 0.9 }}
-  className="text-md text-gray-700 max-w-3xl mx-auto"
->
-  LuxeBite is a premium destination blending fine dining with luxurious accommodation. Our commitment to excellence ensures every guest receives a world-class experience — whether you're enjoying a romantic dinner or an extended stay. Founded on elegance and comfort, LuxeBite redefines modern hospitality.
-</motion.p>
-
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.9 }}
+          className="text-md text-gray-700 max-w-3xl mx-auto"
+        >
+          LuxeBite is a premium destination blending fine dining with luxurious accommodation. Our commitment to excellence ensures every guest receives a world-class experience — whether you're enjoying a romantic dinner or an extended stay. Founded on elegance and comfort, LuxeBite redefines modern hospitality.
+        </motion.p>
       </motion.section>
     </main>
   );

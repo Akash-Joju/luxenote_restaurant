@@ -1,6 +1,7 @@
 'use client'
 
 import { BedDouble, Star } from 'lucide-react'
+import Image from 'next/image'
 
 export default function RoomCards() {
   const rooms = [
@@ -27,17 +28,24 @@ export default function RoomCards() {
           key={i}
           className="bg-white/80 backdrop-blur-lg border border-gray-200 rounded-3xl shadow-xl overflow-hidden transition-transform hover:scale-[1.02]"
         >
-          <img
-            src={room.image}
-            alt={room.title}
-            className="w-full h-60 object-cover"
-          />
+          <div className="relative w-full h-60">
+            <Image
+              src={room.image}
+              alt={room.title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              priority={i === 0} // Prioritize first image load
+            />
+          </div>
           <div className="p-6 space-y-4">
             <div className="flex items-center justify-between">
               <h3 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
                 <BedDouble className="text-indigo-500" /> {room.title}
               </h3>
-              <span className="text-indigo-600 font-semibold text-lg">{room.price}</span>
+              <span className="text-indigo-600 font-semibold text-lg">
+                {room.price}
+              </span>
             </div>
             <p className="text-gray-600">{room.description}</p>
             <div className="flex items-center gap-1 text-yellow-400">
