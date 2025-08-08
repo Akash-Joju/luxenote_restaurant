@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import ClientLayout from "@/components/ClientLayout"; // ✅ moved client logic
 
 export const metadata: Metadata = {
-  title: "LuxeBite",
+  title: "Burpies",
   description: "Restaurant Booking App",
 };
 
