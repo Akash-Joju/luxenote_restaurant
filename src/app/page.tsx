@@ -17,7 +17,7 @@ export default function HomePage() {
       <section className="relative h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <img
-            src="https://i.pinimg.com/originals/61/70/b3/6170b30151da03707cb22eb3a6b813a9.gif"
+            src="https://i.pinimg.com/originals/8a/27/09/8a2709aff18c1e20219e89f6d9da01f2.gif"
             alt="Hero Background"
             className="w-full h-full object-cover"
           />
@@ -31,8 +31,8 @@ export default function HomePage() {
           className="text-5xl md:text-6xl font-bold text-white drop-shadow-xl text-center"
         >
           Welcome to{" "}
-          <span className="text-[#464dd3] drop-shadow-[0_0_5px_white]">
-            LuxeBite
+          <span className="text-[#fef133] drop-shadow-[0_0_5px_white]">
+            BURPIES
           </span>
         </motion.h1>
 
@@ -42,7 +42,7 @@ export default function HomePage() {
           transition={{ duration: 0.9, delay: 0.3 }}
           className="text-lg md:text-xl font-medium text-white mt-2 text-center"
         >
-          A fusion of fine dining & luxurious stays
+          WHERE EVERY BITE IS A PARTY!!!
         </motion.p>
 
         <motion.div
@@ -52,19 +52,15 @@ export default function HomePage() {
           className="mt-10 flex flex-wrap gap-6 justify-center"
         >
           <a href="#book-table">
-            <Button className="animate-pulseSlow bg-blue-900 hover:bg-black-300 text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+            <Button className="animate-pulseSlow bg-yellow-500 hover:bg-black-300 text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
               Book a Table
             </Button>
           </a>
 
-          <Link href="/rooms">
-            <Button className="animate-pulseSlow bg-blue-900 hover:bg-black-300 text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
-              Explore the Rooms
-            </Button>
-          </Link>
+          
 
           <a href="#about">
-            <Button className="animate-pulseSlow bg-blue-900 hover:bg-black text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+            <Button className="animate-pulseSlow bg-yellow-500 hover:bg-black text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
               About Us
             </Button>
           </a>
@@ -80,7 +76,7 @@ export default function HomePage() {
         className="w-full max-w-7xl mx-auto py-20 px-4 scroll-mt-24"
       >
         <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
-          LuxeBite <span className="text-[#464dd3]">Signature Dishes</span>
+          Burpies <span className="text-blue-900">Signature Dishes</span>
         </h2>
 
         <Swiper
@@ -111,8 +107,8 @@ export default function HomePage() {
               img: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1",
             },
             {
-              name: "Garden Salad",
-              img: "https://i.pinimg.com/1200x/6a/8c/99/6a8c991c75b3045a4808467c7143da57.jpg",
+              name: "Sweety Burger",
+              img: "https://i.pinimg.com/1200x/b8/b2/2b/b8b22bb57bd8550ad59a1b63b9f81d44.jpg",
             },
             {
               name: "Classic Steak",
@@ -181,7 +177,7 @@ export default function HomePage() {
             <motion.button
               whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.95 }}
-              className="animate-pulseSlow bg-blue-700 hover:bg-black text-white font-semibold px-6 py-3 rounded-xl shadow-md transition-all duration-300"
+              className="animate-pulseSlow bg-yellow-500 hover:bg-black text-white font-semibold px-6 py-3 rounded-xl shadow-md transition-all duration-300"
             >
               Book Now
             </motion.button>
@@ -189,51 +185,7 @@ export default function HomePage() {
         </motion.div>
       </motion.section>
 
-      {/* ✅ ROOMS SECTION */}
-      <motion.section
-        id="rooms"
-        initial={{ opacity: 0, y: 80 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9 }}
-        viewport={{ once: true }}
-        className="w-full max-w-6xl mx-auto bg-white rounded-xl p-6 shadow-md flex flex-col md:flex-row items-center gap-8 my-24 scroll-mt-24"
-      >
-        <motion.div
-          initial={{ x: -100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.9 }}
-          className="w-full md:w-1/2"
-        >
-          <img
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-            alt="Luxury Room"
-            className="rounded-xl shadow-lg w-full h-auto object-cover"
-          />
-        </motion.div>
-
-        <motion.div
-          initial={{ x: 100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.9, delay: 0.2 }}
-          className="w-full md:w-1/2 text-center md:text-left"
-        >
-          <h3 className="text-3xl font-bold text-gray-900 mb-3">
-            Our Luxury Rooms
-          </h3>
-          <p className="text-md text-gray-700 mb-6">
-            Discover elegant rooms tailored for your comfort, perfect for any occasion.
-          </p>
-          <Link href="/rooms">
-            <motion.button
-              whileHover={{ scale: 1.08 }}
-              whileTap={{ scale: 0.95 }}
-              className="animate-pulseSlow bg-blue-700 hover:bg-black text-white font-semibold px-6 py-3 rounded-xl shadow-md transition-all duration-300"
-            >
-              Explore Rooms
-            </motion.button>
-          </Link>
-        </motion.div>
-      </motion.section>
+      
 
       {/* ✅ FACILITIES SECTION */}
       <motion.section
@@ -254,7 +206,7 @@ export default function HomePage() {
             Our Premium Facilities
           </h3>
           <p className="text-md text-gray-700 max-w-2xl mx-auto">
-            Designed to enhance your stay with luxury and comfort. Explore the exceptional amenities we offer.
+            Designed to fullfill your taste of dishes. Explore the exceptional amenities we offer.
           </p>
         </motion.div>
 
@@ -270,21 +222,9 @@ export default function HomePage() {
               title: "Fine Dining",
               desc: "Gourmet meals from world-class chefs.",
             },
-            {
-              icon: "💆‍♀️",
-              title: "Luxury Spa",
-              desc: "Relax and rejuvenate with premium spa services.",
-            },
-            {
-              icon: "🏊‍♂️",
-              title: "Infinity Pool",
-              desc: "Swim with a view in our scenic rooftop pool.",
-            },
-            {
-              icon: "🛌",
-              title: "Premium Bedding",
-              desc: "Enjoy ultimate comfort and restful sleep.",
-            },
+            
+           
+           
             {
               icon: "🚗",
               title: "Valet Parking",
@@ -323,7 +263,7 @@ export default function HomePage() {
           transition={{ duration: 0.7 }}
           className="text-3xl font-bold text-gray-900 mb-4"
         >
-          About LuxeBite
+          About Burpies
         </motion.h3>
         <motion.p
           initial={{ opacity: 0 }}
@@ -331,7 +271,7 @@ export default function HomePage() {
           transition={{ duration: 0.9 }}
           className="text-md text-gray-700 max-w-3xl mx-auto"
         >
-          LuxeBite is a premium destination blending fine dining with luxurious accommodation. Our commitment to excellence ensures every guest receives a world-class experience — whether you're enjoying a romantic dinner or an extended stay. Founded on elegance and comfort, LuxeBite redefines modern hospitality.
+          Burpies is a premium destination blending fine dining . Our commitment to excellence ensures every guest receives a world-class experience — whether you're enjoying the dishes. Founded on elegance and comfort, Burpies redefines modern hospitality.
         </motion.p>
       </motion.section>
     </main>

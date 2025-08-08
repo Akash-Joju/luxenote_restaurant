@@ -126,7 +126,7 @@ export default function BookingForm() {
         <div className="text-center pt-2">
           <Button
             type="submit"
-            className="w-full text-lg bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-lg"
+            className="w-full text-lg bg-gradient-to-r from-yellow-600 to-yellow-600 hover:from-blue hover:to-indigo-700 transition-all duration-300 shadow-lg"
           >
             Book Now
           </Button>

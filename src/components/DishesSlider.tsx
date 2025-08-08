@@ -30,8 +30,8 @@ export default function DishesPage() {
       img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836",
     },
     {
-      name: "Garden Salad",
-      img: "https://i.pinimg.com/1200x/6a/8c/99/6a8c991c75b3045a4808467c7143da57.jpg",
+      name: "Sweety Burger",
+      img: "https://i.pinimg.com/1200x/b8/b2/2b/b8b22bb57bd8550ad59a1b63b9f81d44.jpg",
     },
   ]
 
@@ -44,7 +44,7 @@ export default function DishesPage() {
       className="w-full max-w-7xl mx-auto py-20 px-4 scroll-mt-24"
     >
       <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
-        LuxeBite <span className="text-[#464dd3] stroke-white">Signature Dishes</span>
+        Burpies <span className="text-[#464dd3] stroke-white">Signature Dishes</span>
       </h2>
 
       <Swiper
